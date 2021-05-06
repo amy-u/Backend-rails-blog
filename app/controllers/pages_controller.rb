@@ -1,5 +1,10 @@
 class PagesController < ApplicationController
     def index
-        @pages = Pages.all
+        @pages = Page.all
+    end
+
+    def show
+        @page = Page.find(params[:id])
+        render text: @page.title
     end
 end
