@@ -6,4 +6,5 @@ Rails.application.routes.draw do
   # pages/new needs to be before id
   get '/pages/new', to: 'pages#new', as: 'new_page'
   get '/pages/:id', to: 'pages#show', as: 'page'
+  get '/pages/:id/edit', to: 'pages#edit', as: 'edit_page'
 end
